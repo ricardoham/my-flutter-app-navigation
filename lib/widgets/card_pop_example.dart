@@ -18,9 +18,6 @@ class CardPop extends StatelessWidget {
               subtitle: Text(''),
             ),
             Container(
-              color: Colors.cyan,
-              height: 200,
-              width: double.infinity,
               child: GestureDetector(
                 child: Image.asset(
                   'assets/images/sky_at_night.jpg',
