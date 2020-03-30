@@ -10,16 +10,16 @@ class RouterList extends StatelessWidget {
       body: Column(
         children: <Widget>[
           RaisedButton(
-            onPressed: null,
+            onPressed: () {
+              Navigator.pushNamed(context, '/first');
+            },
             child: Text('FIRST Screen'),
           ),
           RaisedButton(
-            onPressed: null,
+            onPressed: () {
+              Navigator.pushNamed(context, '/second');
+            },
             child: Text('SECOND Screen'),
-          ),
-          RaisedButton(
-            onPressed: null,
-            child: Text('THIRD Screen'),
           ),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/second_screen.dart';
 import './screens/router_list.dart';
 import './screens/first_screen.dart';
 
@@ -14,7 +15,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
-      routes: {'/': (context) => RouterList()},
+      routes: {
+        '/': (context) => RouterList(),
+        '/first': (context) => FirstScreen(),
+        '/second': (context) => SecondScreen(),
+      },
     );
   }
 }
