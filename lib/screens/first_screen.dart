@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/card_pop_example.dart';
 import './second_screen.dart';
 
 class FirstScreen extends StatelessWidget {
@@ -12,7 +13,17 @@ class FirstScreen extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Text('THE FIRST SCREEN'),
+          Container(
+            height: 20,
+            child: Text(
+              'THE FIRST SCREEN',
+              style: TextStyle(
+                  color: Colors.cyan,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
+            ),
+          ),
+          CardPop(),
           RaisedButton(
             onPressed: () {
               Navigator.push(
