@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/image_card.dart';
 import '../widgets/card_pop_example.dart';
 import './second_screen.dart';
 
@@ -14,7 +15,7 @@ class FirstScreen extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Container(
-            height: 20,
+            padding: EdgeInsets.all(10),
             child: Text(
               'THE FIRST SCREEN',
               style: TextStyle(

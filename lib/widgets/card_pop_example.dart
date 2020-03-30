@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './image_card.dart';
 
 class CardPop extends StatelessWidget {
   const CardPop({Key key}) : super(key: key);
@@ -9,22 +10,37 @@ class CardPop extends StatelessWidget {
       child: Card(
         elevation: 4,
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const ListTile(
-              leading: Icon(Icons.album),
-              title: Text('The'),
+              leading: Icon(Icons.image),
+              title: Text('The Sky at Night'),
               subtitle: Text(''),
+            ),
+            Container(
+              color: Colors.cyan,
+              height: 200,
+              width: double.infinity,
+              child: GestureDetector(
+                child: Image.asset(
+                  'assets/images/sky_at_night.jpg',
+                  fit: BoxFit.cover,
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) {
+                      return ImageCard();
+                    }),
+                  );
+                },
+              ),
             ),
             ButtonBar(
               children: <Widget>[
                 FlatButton(
-                  child: const Text('BUY TICKETS'),
-                  onPressed: () {/* ... */},
-                ),
-                FlatButton(
-                  child: const Text('LISTEN'),
-                  onPressed: () {/* ... */},
+                  child: const Text('See the image'),
+                  onPressed: () {},
                 ),
               ],
             ),
